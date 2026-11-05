@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdaptIQ – Adaptive Learning for Every Student</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- colour-vision-deficiency simulation filters used by the "colour filter" setting -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="f-protanopia"><feColorMatrix type="matrix" values="0.567 0.433 0 0 0  0.558 0.442 0 0 0  0 0.242 0.758 0 0  0 0 0 1 0"/></filter>
+    <filter id="f-deuteranopia"><feColorMatrix type="matrix" values="0.625 0.375 0 0 0  0.7 0.3 0 0 0  0 0.3 0.7 0 0  0 0 0 1 0"/></filter>
+    <filter id="f-tritanopia"><feColorMatrix type="matrix" values="0.95 0.05 0 0 0  0 0.433 0.567 0 0  0 0.475 0.525 0 0  0 0 0 1 0"/></filter>
+  </svg>
+
+  <div id="app">
+    <header class="site-header" role="banner">
+      <h1 class="brand">Adapt<span>IQ</span></h1>
+      <div id="user-box" class="user-box" hidden>
+        <span id="user-label"></span>
+        <button type="button" id="logout-btn" class="btn secondary">Log out</button>
+      </div>
+    </header>
+
+    <nav id="nav" aria-label="Main navigation" hidden></nav>
+
+    <div id="alert" role="alert" class="notice error" hidden></div>
+    <div id="status" role="status" aria-live="polite" class="sr-only"></div>
+
+    <main id="main" tabindex="-1"></main>
+
+    <footer class="site-footer">
+      <p>AdaptIQ – AI adaptive learning for students with disabilities. Built to WCAG 2.1 AA principles:
+         keyboard operable, screen-reader labelled, adjustable text size, six colour themes.</p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
